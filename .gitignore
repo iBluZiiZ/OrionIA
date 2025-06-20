@@ -23,7 +23,7 @@ Thumbs.db
 *.code-workspace
 modelos/
 datos/
-recursos/
+recursos/*
 !recursos/banner.png
 notebooks/
 test_*.py
