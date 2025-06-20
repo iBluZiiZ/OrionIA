@@ -3,3 +3,4 @@ pyttsx3
 scikit-learn
 pyaudio
 joblib
+pandas
