@@ -24,5 +24,6 @@ Thumbs.db
 modelos/
 datos/
 recursos/
+!recursos/banner.png
 notebooks/
 test_*.py
