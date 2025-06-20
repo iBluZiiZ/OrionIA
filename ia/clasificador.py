@@ -13,4 +13,4 @@ vectorizador = joblib.load(vector_path)
 def detectar_intencion(frase):
     entrada_vect = vectorizador.transform([frase])
     prediccion = modelo.predict(entrada_vect)
-    return prediccion[0]  # Devuelve: saludo / orden / pregunta
+    return prediccion[0]

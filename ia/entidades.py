@@ -1,3 +1,7 @@
+import spacy
+
+nlp = spacy.load
+
 palabras_clave = {
     "youtube": ["youtube", "vídeos", "videos"],
     "google": ["google", "navegador", "buscar"],
@@ -10,8 +14,10 @@ palabras_clave = {
 }
 
 def extraer_entidad(frase):
-    frase = frase.lower()
-    for entidad, palabras in palabras_clave.items():
-        if any(palabra in frase for palabra in palabras):
-            return entidad
+    doc = nlp(frase.lower())
+    for ent in doc.ents:
+        return ent.text
+    for token in doc:
+        if token.pos_ in ["NOUN", "PROPN"]:
+            return token.text
     return "desconocido"
